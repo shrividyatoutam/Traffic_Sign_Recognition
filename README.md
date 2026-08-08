@@ -1,8 +1,6 @@
-## Overview
+## Traffic Sign Recognition 
 
-This project implements a Convolutional Neural Network (CNN) for classifying
-43 German traffic sign categories using the GTSRB dataset.
-The trained model supports both single-image prediction and
+This project implements a Convolutional Neural Network (CNN) for classifying 43 German traffic sign categories using the GTSRB dataset.The trained model supports both single-image prediction and
 real-time webcam inference.
 
 ## Features
@@ -13,7 +11,7 @@ real-time webcam inference.
 - Convolutional Neural Network built using TensorFlow/Keras
 - Real-time webcam prediction using OpenCV
 - Single image prediction support
-- Training performance visualization
+- Training performance visualization : loss/accuracy curves, confusion matrix, classification report
 
 ## Dataset
 
@@ -34,8 +32,6 @@ Before training, every image undergoes the following preprocessing steps:
 - Pixel Normalization
 - Image Resizing (32 × 32)
 
-These preprocessing techniques improve image quality and help the model generalize better.
-
 ## Data Augmentation
 
 To reduce overfitting and improve robustness, the following augmentation techniques are applied during training:
@@ -45,6 +41,13 @@ To reduce overfitting and improve robustness, the following augmentation techniq
 - Height Shift
 - Zoom
 - Shear
+
+## Model
+
+A 4-conv-layer CNN (60 filters → 60 filters → 30 filters → 30 filters, with
+max-pooling and dropout) followed by a 500-unit dense layer, trained on
+grayscale, histogram-equalized 32×32 images with on-the-fly data augmentation
+(shift, zoom, shear, rotation).
 
 ## Training
 
@@ -106,10 +109,3 @@ pip install -r requirements.txt
 ```bash
 python Predict_image.py
 ```
-## Model
-
-A 4-conv-layer CNN (60 filters → 60 filters → 30 filters → 30 filters, with
-max-pooling and dropout) followed by a 500-unit dense layer, trained on
-grayscale, histogram-equalized 32×32 images with on-the-fly data augmentation
-(shift, zoom, shear, rotation).
-
