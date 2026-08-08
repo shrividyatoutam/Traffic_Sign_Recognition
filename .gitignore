@@ -1,6 +1,5 @@
 __pycache__/
 *.pyc
 model_trained.keras
-myData/
 *.png
 classification_report.txt
