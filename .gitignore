@@ -1,5 +1,11 @@
 __pycache__/
 *.pyc
 model_trained.keras
-*.png
 classification_report.txt
+loss_plot.png
+accuracy_plot.png
+confusion_matrix.png
+sample_images.png
+class_distribution.png
+augmented_samples.png
+sample_grayscale.png
