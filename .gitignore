@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 model_trained.keras
+myData/
 classification_report.txt
 loss_plot.png
 accuracy_plot.png
